@@ -1,0 +1,377 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	line-height: 100%;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 13px;
+	
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat;
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+	margin-left: 10%;
+	margin-right: 10%;
+	max-width: 1850px;
+	margin: 0 auto 50px;
+	width: 90%;
+	top: 200px;
+	opacity: 0;
+	-webkit-transition: all .8s 1s linear;
+	-moz-transition: all .8s 1s linear;
+	transition: all .8s 1s linear;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+    margin-bottom: 100px;
+    box-shadow: 0 3px 30px rgba(0,0,0,0.5);
+}
+
+.fixed-header,
+.fixed-header-tablet {
+	position: fixed;
+	top: -16%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	width: 100%;
+	-webkit-transition: all .8s linear;
+	-moz-transition: all .8s linear;
+	transition: all .8s linear;
+}
+
+.fixed-header img,
+.fixed-header-tablet img {
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.is-in {
+	top: 0;
+}
+
+.is-shown .container,
+.is-shown .device-wrap {
+	opacity: 1;
+	top: 120px;
+}
+
+.is-shown .click {
+	opacity: 1;
+	margin-left: 280px;
+}
+
+.is-shown ul.menu {
+	top: 0;
+}
+
+ul.menu {
+    display: block;
+    list-style: none;
+    padding: 20px;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    -webkit-transition: all .8s .2s linear;
+	-moz-transition: all .8s .2s linear;
+	transition: all .8s .2s linear;
+	z-index: 1024;
+}
+
+ul.menu > li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+ul.menu > li.active > a {
+    background: rgba(255, 255, 255, 0.53);
+}
+
+ul.menu > li > a {
+	display: block;
+    font-family: arial;
+    text-decoration: none;
+    background: #fff;
+    padding: 12px 27px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.img-shadow {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 50px rgba(0,0,0,0.4);
+	box-shadow: 0 0 50px rgba(0,0,0,0.4);
+}
+
+body {
+	/*overflow: hidden;*/
+}
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #000b30;
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:100%;
+    position:absolute;
+    top: 40%;
+    -webkit-animation: graph 600s linear forwards infinite;
+	background-image: url('../images/graph.jpg');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 274px;
+     -webkit-animation: graph 600s linear forwards infinite;
+	animation: graph 600s linear forwards infinite;
+}
+
+.device-wrap {
+	width: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	margin: 60px 0px 20px 0px;
+	position: relative;
+	top: 80px;
+	opacity: 0;
+	-webkit-transition: all .8s 1s linear;
+	-moz-transition: all .8s 1s linear;
+	transition: all .8s 1s linear;
+}
+
+.ipad-landscape {
+	padding: 101px 0 103px 0;
+	background-image: url(../images/ipad-landscape.png);
+}
+
+.iphone-6-plus-portrait {
+	padding: 103px 0 140px 0px;
+	background-image: url(../images/iphone-6-plus-portrait.png);
+}
+
+.device {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.device .flashingTop, 
+.device .flashingBottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+
+#devices .device .flashingTop {
+	top: 0;
+	padding-top: 4px;
+}
+
+.ipad-landscape span.time, 
+.ipad-portrait span.time {
+	color: #bbb;
+}
+
+.dropdown {
+	position: absolute;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	background-color: #3f90e4;
+	top: 95px;
+	width: 150px;
+	border-radius: 4px;
+	overflow: hidden;
+	z-index: 1024;
+	display: none;
+}
+
+.has-dropdown a:hover + ul {
+	display: block;
+}
+
+.dropdown li {
+	display: block;
+}
+
+.dropdown a {
+	display: block;
+	padding: 15px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.click {
+	  position: absolute;
+	  top: 310px;
+	  z-index: 10;
+	  margin-left: 350px;
+
+	  opacity: 0;
+	  -webkit-transition: all .8s 1.5s linear;
+	-moz-transition: all .8s 1.5s linear;
+	transition: all .8s 1.5s linear;
+}
+
+
+.fadeInUp {
+    opacity:0;
+    -webkit-transform: translateX(400px); 
+    transform: translateX(400px); 
+}
+
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+.graph-bg {
+	position: relative;
+	-webkit-animation: graph 600s linear forwards infinite;
+	animation: graph 600s linear forwards infinite;
+	background-image: url('../images/v1/graph.jpg');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 274px;
+	background-position: 0 0;
+}
+
+
+/*************
+* FadeInUp *
+*************/
+
+@-webkit-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(200px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@-moz-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(200px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(200px); 
+    } 
+    50%{
+       opacity: 0.3; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+@-webkit-keyframes graph { 
+    0% { 
+        background-position: 0% 0%;
+    } 
+
+    100% { 
+        background-position: -1000% 0;
+    } 
+}
+
+@-moz-keyframes graph { 
+    0% { 
+        background-position: 0% 0%;
+    } 
+
+    100% { 
+        background-position: -1000% 0;
+    } 
+}
+
+@keyframes graph { 
+    0% { 
+        background-position: 0% 0%;
+    } 
+
+    100% { 
+        background-position: -1000% 0;
+    } 
+}
+
+.fadeInUp{ 
+    opacity: 0; 
+    -webkit-transform: translateY(400px); 
+    transform: translateY(400px);
+}
+.fadeInUp.go { 
+    -webkit-animation-name: fadeInUp; 
+    animation-name: fadeInUp; 
+}
+
+
+.bg-blue {
+	overflow: hidden;
+	background-color: #000b30;
+}
+
+.container2 {
+	max-width: 1650px;
+	margin: 0 auto 50px;
+	width: 90%;
+}
+
+.bg-gray {
+	background-color: #f9f9f9;
+}
+
+
+.bg-dark-blue {
+	background-color: #1f2b3d;
+}
